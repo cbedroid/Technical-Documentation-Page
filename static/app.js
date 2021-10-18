@@ -8,7 +8,7 @@ $(document).ready(() => {
     let documentation = document.querySelectorAll(".main-section");
     let callback = (entries, observer) => {
       entries.forEach((entry) => {
-        // Toggle docuemntatuon links active
+        // Toggle documentation links active
         if (entry.isIntersecting) {
           const scrollspy_targets = $("#scrollspy-nav .nav-link");
           const doc_id = entry.target.id;
@@ -26,7 +26,7 @@ $(document).ready(() => {
     });
   })();
 
-  /* handle documentation search bar*/
+  /* Handle documentation search bar*/
   (function handleDocSearch() {
     const datalist = $("#doc-datalist");
     $(".main-section").each(function () {
@@ -47,7 +47,7 @@ $(document).ready(() => {
     });
   })();
 
-  /* handle navbar collapse on mobile */
+  /* Handle navbar collapse on mobile */
   (function handleNavMenu() {
     const navmenu = (menu = new bootstrap.Collapse($("#navmenu")));
     $("#main-doc").on("click touch", () => {
@@ -57,7 +57,7 @@ $(document).ready(() => {
     });
   })();
 
-  /* update DOM with repo data */
+  /* Update DOM with repository statistics */
   function updateGitElem(data) {
     $("#stars-total").text(data.stars);
     $("#issues-total").text(data.issues);
@@ -84,13 +84,13 @@ $(document).ready(() => {
       };
 
       localStorage.pydatpiff = JSON.stringify(repo_data);
-      // update DOM with new Repo data
+      // Update DOM with new Repo data
       updateGitElem(repo_data);
     });
   }
 
 (function handleLocalStorage() {
-    // retrieve repo stats from local Storage
+    // Retrieve repo stats from local Storage
     let storage_data = localStorage.pydatpiff;
     const today = new Date().getTime();
     const ONE_DAY = 1000 * 60 * 60 * 24;
@@ -102,7 +102,7 @@ $(document).ready(() => {
     if (refresh_date <= last_refresh) {
       return fetchRepo();
     }
-    // update Git Element from LocalStorage
+    // Update Git Element from LocalStorage
     updateGitElem(storage_data);
   })();
 
