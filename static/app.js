@@ -105,7 +105,4 @@ $(document).ready(() => {
     // Update Git Element from LocalStorage
     updateGitElem(storage_data);
   })();
-
-
-
 });
