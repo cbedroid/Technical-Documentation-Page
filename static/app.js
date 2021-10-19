@@ -49,8 +49,9 @@ $(document).ready(() => {
 
   /* Handle navbar collapse on mobile */
   (function handleNavMenu() {
-    const navmenu = (menu = new bootstrap.Collapse($("#navmenu")));
-    $("#main-doc").on("click touch", () => {
+    const navmenu = bootstrap.Collapse.getOrCreateInstance("#navmenu",{toggle: false});
+
+    $("#main-doc").bind("click touch", () => {
       if (navmenu._isShown()) {
         navmenu.hide(); // collapse menu
       }

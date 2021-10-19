@@ -70,8 +70,6 @@ code
   white-space: pre-line
   position: relative
   padding: 0 .2rem
-  margin: 0 .15rem
-  width: fit-content
   border: 1px solid #beb7b7c5
   &.code-block
     display: grid
@@ -80,12 +78,16 @@ code
     color: #333
     padding: 1rem
     margin: to-rem(16px) .625rem
-
     font-weight: 600
     word-break: normal
     word-wrap: normal
     line-height: 1.25
-    width: 100%
+    max-width: 1000px
+    width: auto
+    overflow: auto
+    li
+      margin: 0
+      line-height: 18px
 
   *
     margin: 0 !important

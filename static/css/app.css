@@ -68,8 +68,6 @@ code {
   white-space: pre-line;
   position: relative;
   padding: 0 0.2rem;
-  margin: 0 0.15rem;
-  width: fit-content;
   border: 1px solid #beb7b7c5; }
 code.code-block {
   display: grid;
@@ -82,7 +80,12 @@ code.code-block {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.25;
-  width: 100%; }
+  max-width: 1000px;
+  width: auto;
+  overflow: auto; }
+code.code-block li {
+  margin: 0;
+  line-height: 18px; }
 code * {
   margin: 0 !important; }
 code.linux {
@@ -94,7 +97,6 @@ code.linux::before {
   left: 0;
   display: grid;
   align-items: center;
-  height: 100%;
   color: inherit;
   font-weight: bold;
   z-index: 50; }
@@ -154,7 +156,6 @@ code.go-dark {
   left: 0;
   display: grid;
   align-items: center;
-  height: 100%;
   color: #2cca2c;
   font-weight: bold;
   z-index: 50; }
@@ -183,7 +184,6 @@ code.go-dark {
   left: 0;
   display: grid;
   align-items: center;
-  height: 100%;
   color: inherit;
   font-weight: bold;
   z-index: 50; }
