@@ -26,7 +26,7 @@
             <input class="form-control form-control-sm" list="doc-datalist" name="search" id="doc-search" placeholder="search docs">
             <datalist id="doc-datalist">
             </datalist>
-            <button class="btn btn-sm btn-outline-secondary">search</button>
+            <button id="submit-btn" class="btn btn-sm btn-outline-secondary">search</button>
           </div>
         </header>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,8 @@
             <nav id="scrollspy-nav" class="nav nav-pills flex-sm-column  me-auto mb-2 mb-lg-0">
               <li class="nav-item"><a class="nav-link active" href="#Getting_Started">Getting Started</a></li>
               <li class="nav-item"><a class="nav-link" href="#How_To_Install">How To Install</a></li>
-              <li class="nav-item"><a class="nav-link" href="#Play_Songs">Play Songs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Mixtape">Mixtape</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Media">Media</a></li>
               <li class="nav-item"><a class="nav-link" href="#Media_Controls">Media Controls</a></li>
               <li class="nav-item"><a class="nav-link" href="#Search_for_Song">Search for Song</a></li>
               <li class="nav-item"><a class="nav-link" href="#Download_Songs">Download Songs</a></li>
@@ -57,46 +58,54 @@
           </span>
           Getting Started
         </header>
-        <article>
-          <p>PyDatpiff is a light weight <a class="p-link" href="https://www.python.org/" target="_blank">python</a> command line audio streaming and media service founded on Sep 29, 2020 by <a class="p-link" href="https://github.com/cbedroid/" target="_blank">CbeDroid</a>.
-            It comes with built-in support for multipl platform such as Windows, Mac, and also Linux. Pydatpiff allows users to stream music from a wide genre of music such as Hip-Hop, RnB, Pop, Jazz and more directly to their device on-demand.
-          </p>
-          <div id="gs-fig-container" class="wrapper grid grid-center pb-3">
-            <figure class="figure">
-              <img class="figure-img img-fluid" src="https://user-images.githubusercontent.com/54720725/96840060-f872ab80-1417-11eb-93ac-c964217b98b1.png" alt="Pydatiff logo" style="min-height:300px">
-              <figcaption class="figure-caption"></figcaption>
-            </figure>
-            <div id="gs-action" class="d-none d-md-flex justify-content-between flex-wrap">
-              <h2 class="logo-title flex-grow-1">Pydatpiff</h2>
-              <ul id="git-list" class="d-flex flex-row justify-content-around list-unstyled w-100 px-3">
-                <li class="git-pill"><span class="pill-left">
-                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star-fill mr-1">
-                      <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
-                    </svg>stars</span>
-                  <span id="stars-total" class="git-total"></span>
-                </li>
-                <li class="git-pill">
-                  <span class="pill-left">
-                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-issue-opened UnderlineNav-octicon d-none d-sm-inline">
-                      <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                      <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
-                    </svg>issues
-                  </span>
-                  <span id="issues-total" class="git-total"></span></li>
-                <li class="git-pill">
-                  <span class="pill-left">
-                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked">
-                      <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
-                    </svg>forks
-                  </span>
-                  <span id="forks-total" class="git-total">
-                  </span>
-                </li>
-              </ul>
+        <div class="container">
+          <article>
+            <p class="mx-auto" style="max-width: 800px">PyDatpiff is a light weight <a class="p-link" href="https://www.python.org/" target="_blank">python</a> command line audio streaming and media service founded on Sep 29, 2020 by <a class="p-link" href="https://github.com/cbedroid/" target="_blank">CbeDroid</a>.
+              It comes with built-in support for multipl platform such as Windows, Mac, and also Linux. Pydatpiff allows users to stream music from a wide genre of music such as Hip-Hop, RnB, Pop, Jazz and more directly to their device on-demand.
+            </p>
+            <div class="card bg-secondary shadow mx-auto" style="max-width: 800px;--bs-bg-opacity: .15">
+              <div class="card-img-top">
+                <figure class="figure">
+                  <img class="figure-img img-fluid" src="https://user-images.githubusercontent.com/54720725/96840060-f872ab80-1417-11eb-93ac-c964217b98b1.png" alt="Pydatiff logo" style="min-height:300px">
+                  <figcaption class="figure-caption"></figcaption>
+                </figure>
+              </div>
+              <div class="card-title px-lg-3">
+                <h2 class="logo-title flex-grow-1 mb-3">Pydatpiff</h2>
+                <p class="logo-lead lead text-center"> The Unofficial Datpiff Music Application. Play and download the latest Hip-Hop and RnB songs.</p>
+              </div>
+              <div class="card-body">
+                <ul id="git-list" class="d-flex flex-row justify-content-around list-unstyled px-3 px-xl-5 ">
+
+                  <li class="git-pill"><span class="pill-left">
+                      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star-fill mr-1">
+                        <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+                      </svg>stars</span>
+                    <span id="stars-total" class="git-total"></span>
+                  </li>
+                  <li class="git-pill">
+                    <span class="pill-left">
+                      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-issue-opened UnderlineNav-octicon d-none d-sm-inline">
+                        <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+                        <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+                      </svg>issues
+                    </span>
+                    <span id="issues-total" class="git-total"></span></li>
+                  <li class="git-pill">
+                    <span class="pill-left">
+                      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked">
+                        <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+                      </svg>forks
+                    </span>
+                    <span id="forks-total" class="git-total">
+                    </span>
+                  </li>
+                </ul>
+                <p class="text-center"><a href="https://github.com/cbedroid/pydatpiff">View on Github</a> - View Full Documentation and Codes </p>
+              </div>
             </div>
-            <p class="text-center"><a href="https://github.com/cbedroid/pydatpiff">View on Github</a> - View Full Documentation and Codes </p>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
       <!--section 2-->
       <section id="How_To_Install" class="main-section">
@@ -137,18 +146,17 @@
         </article>
       </section>
       <!--section 3 -->
-      <section id="Play_Songs" class="main-section">
+      <section id="Mixtape" class="main-section">
         <header>
           <span class="link-icon">
             <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="32" height="32" aria-hidden="true">
               <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
             </svg>
           </span>
-          Play Songs
+          Mixtape
         </header>
         <article id="pydatpiff-mixtapes">
-          <h2 class="article-header">Mixtapes</h2>
-          <p class="lead"> <span class="fw-bold">pydatpiff.Mixtapes</span> - is a class used to load an artists's mixtape.</p>
+          <p class="lead"> <span class="fw-bold">pydatpiff.Mixtapes</span> - Pydatpiff main class used to fetch an artist' mixtape.</p>
           <p>Create an Mixtapes object:</p>
           <code id="code-mixtapes" class="code-block go-dark">
             <ul class="list-unstyled text-light">
@@ -168,9 +176,19 @@
             </ul>
           </code>
         </article>
+      </section>
+      <!--section 4-->
+      <section id="Media" class="main-section">
+        <header>
+          <span class="link-icon">
+            <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="32" height="32" aria-hidden="true">
+              <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+            </svg>
+          </span>
+          Media
+        </header>
         <article id="pydatpiff-media">
-          <h2 class="article-header">Media</h2>
-          <p class="lead"><span class="fw-bold">pydatpiff.Media</span> - is a class that controls the PyDatpiff Media Player.</p>
+          <p class="lead"><span class="fw-bold">pydatpiff.Media</span> - is class used to load and play an artist's mixtape.</p>
           <div class="article-content">
             <p class="content-lead">Here are some useful things you can do with <em>Media</em></p>
             <ul>
@@ -197,30 +215,30 @@
               </ul>
             </code>
           </div>
-          <div class="article-content">
-            <h4 class="content-title">Playing Songs</h4>
-            <p>Songs can be played by referencing either a <em>index</em> or <em>title</em>.</p>
-            <blockquote class="bd-callout bd-callout-primary">Song's title <b>do not</b> have to be an exact match.</blockquote>
-            <code class="code-block go-dark">
-              <ul class="list-unstyled text-light">
-                <li class="py-cmt"># Play song by referencing mixtape's title.</li>
-                <li class="py-style">media.<span class="py-var">play</span>(<span class="py-cmt">"Kurupted"</span>)</li>
-                <li class="py-cmt"># Or by index.</li>
-                <li class="py-style">media.<span class="py-var">play</span>(<span class="py-cmt">17</span>)</li>
-                <li class="py-cmt text-white">
-                  <div class="wrapper">
-                    <h4 class="fw-bold">♬♬ Playing Song ♬♬</h4>
-                    <p>Artist: Kendrick Lamar</p>
-                    <p>song: Kurupted</p>
-                    <p>Sixe: Size: 3.44 MB</p>
-                  </div>
-                </li>
-              </ul>
-            </code>
-          </div>
+        </article>
+        <article>
+          <h2 class="content-title">Playing Songs</h2>
+          <p>Songs can be played by referencing either a <em>index</em> or <em>title</em>.</p>
+          <blockquote class="bd-callout bd-callout-primary">Song's title <b>do not</b> have to be an exact match.</blockquote>
+          <code class="code-block go-dark">
+            <ul class="list-unstyled text-light">
+              <li class="py-cmt"># Play song by referencing mixtape's title.</li>
+              <li class="py-style">media.<span class="py-var">play</span>(<span class="py-cmt">"Kurupted"</span>)</li>
+              <li class="py-cmt"># Or by index.</li>
+              <li class="py-style">media.<span class="py-var">play</span>(<span class="py-cmt">17</span>)</li>
+              <li class="py-cmt text-white">
+                <div class="wrapper">
+                  <h4 class="fw-bold">♬♬ Playing Song ♬♬</h4>
+                  <p>Artist: Kendrick Lamar</p>
+                  <p>song: Kurupted</p>
+                  <p>Sixe: Size: 3.44 MB</p>
+                </div>
+              </li>
+            </ul>
+          </code>
         </article>
       </section>
-      <!--section 4-->
+      <!--section 5-->
       <section id="Media_Controls" class="main-section">
         <header>
           <span class="link-icon">
@@ -231,7 +249,7 @@
           Media Controls
         </header>
         <article id="pydatpiff-player">
-          <p class="lead"><span class="fw-bold">pydatpiff.Media.player</span> - is a class that controls the PyDatpiff Media Audio.</p>
+          <p class="lead"><span class="fw-bold">pydatpiff.Media.player</span> - is a media controller object used to control a loaded audio track. </p>
           <p>Media player allows user to <code>rewind</code>, <code>fast-forward</code>, <code>pause</code>, <code>stop</code> and control <code>volume</code> of music.</p>
           <code id="code-search" class="code-block go-dark">
             <ul class="list-unstyled text-light">
@@ -271,7 +289,7 @@
           </code>
         </article>
       </section>
-      <!--section 5-->
+      <!--section 6-->
       <section id="Search_for_Song" class="main-section">
         <header>
           <span class="link-icon">
@@ -282,7 +300,7 @@
           Search for Song
         </header>
         <article id="pydatpiff-search">
-          <p class="lead"><span class="fw-bold">pydatpiff.Media.findSong</span> - is a method that search for a mixtape by its name or by a song in the mixtapes.</p>
+          <p class="lead"><span class="fw-bold">pydatpiff.Media.findSong</span> - is a query method used to search for a mixtape. Users can search either by entering the name of the mixtape or by a song in a mixtape.</p>
           <blockquote class="bd-callout bd-callout-warning">
             <div class="d-flex flex-wrap align-items-center">
               <img class="img-fluid" src="https://www.dictionary.com/e/wp-content/uploads/2018/03/Thinking_Face_Emoji-Emoji-Island.png" alt="Thinking emoji" style="height:75px;width:75px">
@@ -299,7 +317,7 @@
           </code>
         </article>
       </section>
-      <!--section 6-->
+      <!--section 7-->
       <section id="Download_Songs" class="main-section">
         <header>
           <span class="link-icon">
@@ -310,7 +328,7 @@
           Download Songs
         </header>
         <article id="pydatpiff-download">
-          <p class="lead"><span class="fw-bold">pydatpiff.Media.download</span> - is a method that download a song from a mixtape.</p>
+          <p class="lead"><span class="fw-bold">pydatpiff.Media.download</span> - is a method used to download a song from a mixtape.</p>
           <p> Here is a some useful <code>arguments</code> that can be passed to the download method.</p>
           <ul>
             <li><b>song</b> - index or name of song</li>
@@ -330,7 +348,7 @@
           </div>
         </article>
         <article id="pydatpiff-downloadAlbum" class="mt-5">
-          <p class="lead"><span class="fw-bold">pydatpiff.Media.downloadAlbum</span> - is a method that download mixtape's album.</p>
+          <p class="lead"><span class="fw-bold">pydatpiff.Media.downloadAlbum</span> - is a method used to download a mixtape full album. </p>
           <div class="article-content">
             <code id="code-search" class="code-block go-dark">
               <ul class="list-unstyled text-light">

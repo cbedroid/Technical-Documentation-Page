@@ -12,8 +12,10 @@ $(document).ready(() => {
         if (entry.isIntersecting) {
           const scrollspy_targets = $("#scrollspy-nav .nav-link");
           const doc_id = entry.target.id;
-          const doc_link = $(scrollspy_targets).filter(function () {
-            return this.href.includes(doc_id);
+          const doc_link = $(scrollspy_targets).filter(function (i,e) {
+            const link_len = doc_id.length
+            const entry_len = e.text.length
+            return this.href.includes(doc_id) && entry_len==link_len;
           });
           $(scrollspy_targets).removeClass("active");
           $(doc_link).addClass("active");
@@ -34,6 +36,12 @@ $(document).ready(() => {
       const option = `<option data-id="${this.id}" value="${topic}"/>`;
       $(datalist).append(option);
     });
+
+    // Bind search sumbit button event
+    $("#submit-btn").bind('click touch',()=>{
+      // trigger change event 
+      $('#doc-search').change()      
+    })
 
     $("#doc-search").on("change", function () {
       const topic_id = this.value.replace(" ", "_").trim();
